@@ -1,0 +1,64 @@
+<!-- <div class="info">
+    <p>This demonstrates a simple single selection table with the 3rd row selected by default.</p>
+</div> -->
+<div class="modal fade" id="toggleData" tabindex="-1" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+                <h4 class="modal-title">请选择你想 显示/隐藏 的数据</h4>
+            </div>
+            <div class="modal-body">
+                <li *ngFor="let title of allTitles">
+                    <input type='checkbox' class="selectBtn" [id]="title.prop" (click)='toggle(title)' [checked]='isChecked(title)' />
+                    <label [attr.for]="title.prop">{{title.name}}</label>
+                </li>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='saveSelect($event)'>保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="btn-group tool" style="width:100%">
+    <button class="btn btn-info btn-small btn-fun" (click)="jumpAdd()"><img class="btn-img" src="./assets/icon/add.png">添加数据 666</button>
+    <button class="btn btn-info btn-small btn-fun" (click)="jumpWatch()"><img class="btn-img" src="./assets/icon/watch.png">查看数据</button>
+    <button class="btn btn-info btn-small btn-fun" (click)="jumpDel()"><img class="btn-img" src="./assets/icon/delete.png">删除数据</button>
+    <button class="btn btn-info btn-small btn-fun" (click)="jumpChange()"><img class="btn-img" src="./assets/icon/change.png">修改数据</button>
+    <button class="btn btn-info btn-small btn-fun" (click)="jumpAddAgain()"><img class="btn-img" src="./assets/icon/add.png">继续添加</button>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-info btn-small dropdown-toggle btn-fun" data-toggle="dropdown">
+            <img class="btn-img" src="./assets/icon/changeFn.png">
+            功能按钮
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="javascript:;" data-toggle="modal" data-target="#toggleData"><img class="btn-img" src="./assets/icon/show.png">显示/隐藏数据</a>
+                <a href="javascript:;" (click)="print()"><img class="btn-img" src="./assets/icon/print.png">打印</a>
+                <a href="javascript:;" (click)="download()"><img class="btn-img" src="./assets/icon/download.png">下载</a>
+                <a href="javascript:;"><img class="btn-img" src="./assets/icon/import.png">导入</a>
+                <a href="javascript:;"><img class="btn-img" src="./assets/icon/export.png">导出</a>
+                <a href="javascript:;"><img class="btn-img" src="./assets/icon/resouseDelete.png">回收站</a>
+                <a href="javascript:;"><img class="btn-img" src="./assets/icon/share.png">分享</a>
+            </li>
+        </ul>
+    </div>
+    &lt;!&ndash; <button class="btn btn-info btn-small" type="button" data-toggle="modal" data-target="#toggleData">显示/隐藏数据</button> &ndash;&gt;
+    <div class="form-inline pull-right">
+        <div class="form-group">
+            <select #select name="select" id="select" class="form-control" (change)="this.searchTarget = $event.target.value;">
+                <option value="all">全部</option>
+                <option value="{{title.prop}}" *ngFor="let title of columns">{{title.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input (keyup)="search($event)" type="search" name="search" id="search" class="form-control" placeholder="请输入你要搜索的内容">
+        </div>
+    </div>
+</div>-->
+<ngx-datatable class="material" [messages]="messages" [rows]="rows" [columnMode]="'force'" [columns]="columns" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [selected]="selected" [selectionType]="'multiClick'" (select)='onSelect($event)'>
+</ngx-datatable>

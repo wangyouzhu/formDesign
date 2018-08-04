@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+/* 进度条 */
+.spinner{
+    width: 100%;
+    height: 100%;
+    background: #257ab1;
+    z-index: 9999;
+    position: fixed;
+    overflow: hidden;
+    animation: bg 2s infinite ease-in-out;
+}
+@keyframes bg {
+    0%,100% {background:#47a7e6}
+    50% {background:#257ab1}
+}
+.spinner .circle{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 0.6;
+    top: 42%;
+    left: 50%;
+    margin-top: calc(-100px / 2);
+    margin-left: calc(-50px / 2);
+    animation: scale 2s infinite ease-in-out;
+}
+@keyframes scale {
+    0%,100% {transform: scale(0)}
+    50% {transform: scale(1.5)}
+}
+.spinner .circle:last-of-type{
+    animation-delay: 1s;
+}
+
+.spinner .resValue{
+    color: #fdfdfd;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-top: calc(50px / 2);
+    margin-left: calc(-250px / 2);
+    font-size: 18px;
+    width: 250px;
+    text-align: center;
+}
+@keyframes font {
+    25% {transform: translateX(100px);}
+    80% {transform: translateX(-100px); filter: blur(2px)}
+    100% {transform: translateX(0px); filter: blur(0px)}
+}
+
+body.spinnerContainer{
+    overflow: hidden;
+}
+.node-template{
+  float: right;
+  margin-left: 7px;
+}
+.fa-tablet{
+  color: #2fcc6f;
+}
+.fa-desktop{
+  color: #2fcc6f;
+}
+.fa-sitemap{
+  color: #8681cc;
+}

@@ -1,0 +1,13 @@
+<div class="formManager">
+  <div class="tree-container">
+    <div class="tree-content">
+    	<div class="tree-top-title">坤智程序编辑</div>
+      <tree #treePages [tree]="tree" (menuItemSelected)="onMenuItemSelected($event)" [settings]="settings" (nodeMoved)="handleMoved($event)" (nodeRenamed)="handleRenamed($event)"
+        (nodeRemoved)="handleRemoved($event)" (nodeSelected)="handleSelected($event)" (nodeCreated)="handleCreated($event)">
+      </tree>
+    </div>
+  </div>
+  <div class="ueditor-container">
+    <app-page-editor [nodeType]="node_type" [nodeId]="node_id" [nodeName]="node_name" [nodeParentId]="node_parentId" [nodeParentId2x]="node_parentId2x"></app-page-editor>
+  </div>
+</div>

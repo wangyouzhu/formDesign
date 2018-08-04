@@ -1,0 +1,14 @@
+<div class="formManager">
+<div class="tree-container" style="height: 100vh;overflow-y: auto;">
+    <div class="tree-content">
+      <tree #treePages [tree]="tree" [settings]="settings" (menuItemSelected)="onMenuItemSelected($event)" (nodeMoved)="handleMoved($event)" (nodeRenamed)="handleRenamed($event)"
+        (nodeRemoved)="handleRemoved($event)" (nodeSelected)="handleSelected($event)"
+        (nodeCreated)="handleCreated($event)">
+      </tree>
+    </div>
+  </div>
+  <div class="datatable-container">
+    <app-data-table [hidden]="!dataTableShow"></app-data-table>
+    <router-outlet></router-outlet>
+  </div>
+</div>

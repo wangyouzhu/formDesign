@@ -1,0 +1,165 @@
+<!--<h5 *ngIf="nodeName == null" >您当前还没有选择表...</h5>
+<h5 *ngIf="nodeName != null" >当前所打开的表：{{nodeName}}</h5>
+<h5 *ngIf="nodeName != null" >当前所打开的表ID：{{nodeId}}</h5>-->
+<input type="hidden" id="nodeParentId" value="{{nodeParentId}}">
+<input type="hidden" id="nodeParentId2x" value="{{nodeParentId2x}}">
+<form method="post" id="saveform" name="saveform" action="">
+  <input type="hidden" name="fields" id="fields" value="0">
+  <input type="hidden" name="node_id" id="node_id" value="{{nodeId}}">
+  <input type="hidden" name="node_name" id="node_name" value="{{nodeName}}">
+	<div class="ue-top-tableid1">
+		<span *ngIf="nodeName == null">您当前还没有选择表...</span>
+	     <span *ngIf="nodeName != null">当前所打开表名称：{{nodeName}}&nbsp;&nbsp;ID：{{nodeId}}</span>
+		<!--<span *ngIf="nodeName != null">当前所打开表名称：{{nodeName}}&nbsp;&nbsp;&nbsp;ID：{{nodeId}}</span>-->
+	</div>
+  <div class="ue-top-swtool">
+  	<div class="ue-top-swmobile">
+  		<span (click)="changeEditor()" class="swbtn-pc-mobile">{{versionEditor}}版编辑</span>
+  	</div>
+  </div>
+  <div class="ue-my-control" *ngIf="swPluginTool">
+		<!-- <div class="ue-top-sw">
+				<ul>
+					<li [ngClass]="{'act':swPluginTool}" (click)="setPluginTool(true)">控件</li>
+					<li [ngClass]="{'act':!swPluginTool}" (click)="setPluginTool(flase)">组合</li>
+				</ul>
+			</div> -->
+  	<table>
+  		<tr>
+  			<td class="ue-my-ctlblock-title">编辑</td>
+  			<td>
+  				<div class="ue-my-ctlblock-btn">
+					<span (click)="exec('pinglun');" class="mybtn noBtn">评论</span>
+					<span (click)="exec('addimage');" class="mybtn">动态上传</span>
+					<span (click)="exec('textarea');" class="mybtn">多行文本</span>
+					<span (click)="exec('listctrl');" class="mybtn">列表编辑</span>
+					<span (click)="exec('reportcontrol');" class="mybtn">报表控件</span>
+	  				<span (click)="exec('select');" class="mybtn">下拉菜单</span>
+					<span (click)="exec('radios');"	 class="mybtn">单选框</span>
+					<span (click)="exec('text');" class="mybtn">文本框</span>
+					<span (click)="exec('checkboxs');" class="mybtn">复选框</span>
+            		<span (click)="exec('macros');" class="mybtn">宏控件</span>
+					<span (click)="exec('search');" class="mybtn">搜索</span>
+					<span (click)="exec('rechtext_editing');" class="mybtn">富文本控件</span>
+
+
+	  				<!-- <span (click)="exec('conterie');" class="mybtn">图文控件</span> -->
+  				</div>
+  			</td>
+		  </tr>
+		  <tr>
+			<td class="ue-my-ctlblock-title">展示</td>
+			   <td>
+				  <div class="ue-my-ctlblock-btn">
+						<span (click)="exec('classification');" class="mybtn noBtn">分类控件</span>
+						<span (click)="exec('progressbar');" class="mybtn noBtn">进度条</span>
+						<span (click)="exec('qrcode');" class="mybtn noBtn">二维码</span>
+
+						<span (click)="exec('group');" class="mybtn">科普列表</span>
+
+						<!-- <span (click)="exec('pagedetails');" class="mybtn ">组合控件</span> -->
+						<span (click)="exec('dangjianlist');" class="mybtn">党建列表</span>
+						<span (click)="exec('dangjiandetail');" class="mybtn">党建内容详情页</span>
+						<span (click)="exec('dangjiancourse');" class="mybtn">党建列表详情页</span>
+					  <span (click)="exec('kepudetail');" class="mybtn">科普详情页</span>
+						<span (click)="exec('wifiblock');" class="mybtn">列表热区</span>
+						<span (click)="exec('formlist');" class="mybtn">列表</span>
+						<span (click)="setMyPlugins('wxgrouptag');" class="mybtn">微信分组标签</span>
+				  </div>
+			  </td>
+		  </tr>
+  		<tr>
+			  <td class="ue-my-ctlblock-title">路由</td>
+  			<td>
+  				<div class="ue-my-ctlblock-btn">
+	  			    <span (click)="exec('iconrouter');" class="mybtn noBtn">路由控件</span>
+					<span (click)="exec('classification');" class="mybtn noBtn">动态分类控件</span>
+	  				<span (click)="exec('iframerouter');" class="mybtn">内嵌路由控件</span>
+	  				<!--<span (click)="exec('sort');" class="mybtn">分类控件</span>-->
+					<span (click)="exec('button');" class="mybtn">路由按钮</span>
+	  				<span (click)="exec('tpl');" class="mybtn">首页母板</span>
+					<!--<span (click)="exec('mtpl');" class="mybtn">手机首页母板</span>
+					<span (click)="exec('toolbar');" class="mybtn">入口条</span>-->
+
+				</div>
+  			</td>
+  		</tr>
+
+		  <tr>
+				<td class="ue-my-ctlblock-title">管理</td>
+
+				<td>
+					<div class="ue-my-ctlblock-btn">
+						<span (click)="setGlc();" class="mybtn noBtn">管理工具</span>
+						<span (click)="exec('');" class="mybtn noBtn" >提交</span>
+						<span (click)="exec('');" class="mybtn noBtn">列表</span>
+						<span (click)="exec('');" class="mybtn noBtn">删除</span>
+						<span (click)="exec('');" class="mybtn noBtn">修改</span>
+						<span (click)="exec('');" class="mybtn noBtn">打印</span>
+					    <span (click)="exec('macros');" class="mybtn">宏控件</span>
+					</div>
+				</td>
+		  </tr>
+		  <tr>
+			<td class="ue-my-ctlblock-title">模板</td>
+
+			<td>
+				<div class="ue-my-ctlblock-btn">
+					<span (click)="exec('onlinehard');" class="mybtn">网络硬盘</span>
+					<span (click)="exec('workword');" class="mybtn" >工作文档</span>
+					<span (click)="exec('workform');" class="mybtn">工作表单</span>
+					<span (click)="exec('workflow');" class="mybtn">工作流程</span>
+					<span (click)="exec('schedule');" class="mybtn">日程安排</span>
+					<span (click)="exec('task');" class="mybtn">任务安排</span>
+					<span (click)="exec('beike');" class="mybtn">备课</span>
+					<span (click)="exec('resource');" class="mybtn">资源库</span>
+					<span (click)="exec('teach');" class="mybtn">教学计划</span>
+					<span (click)="exec('class');" class="mybtn">班级</span>
+					<span (click)="exec('curriculum');" class="mybtn">课程表</span>
+					<span (click)="exec('jiangtang');" class="mybtn">讲堂</span>
+					<span (click)="exec('zujuan');" class="mybtn">智能组卷</span>
+					<span (click)="exec('yuejuan');" class="mybtn">智能阅卷</span>
+					<span (click)="exec('chaxun');" class="mybtn">数据查询</span>
+					<span (click)="exec('audit');" class="mybtn">数据审核</span>
+				</div>
+			</td>
+	  </tr>
+	<!--  <tr>
+				<td class="ue-my-ctlblock-title">其它</td>
+				<td>
+					<div class="ue-my-ctlblock-btn">
+
+
+
+						 <span (click)="exec('asscontrol');" class="mybtn">关联控件</span>
+
+
+					   <span (click)="exec('routerClassify');" class="mybtn">路由分类控件</span>
+
+					</div>
+				</td>
+			</tr>			 -->
+  	</table>
+  </div>
+  <div class="ue-my-control" *ngIf="!swPluginTool">
+  	<table>
+  		<tr>
+  			<td class="ue-my-noctlblock-msg">组合控件更新中...</td>
+  		</tr>
+  	</table>
+  </div>
+  <div>
+ <!--<div *ngIf="!toggleVersion" class="phoneSelectContainer">
+        <p>选择不同的手机屏幕</p>
+        <select id="phoneSelect" (change)="phoneChange($event)">
+          <option value="iphone6p">iPhone 6 Plus</option>
+          <option value="iphone6">iPhone 6</option>
+          <option value="iphone5">iPhone 5</option>
+          <option value="iphone4">iPhone 4</option>
+          <option value="ipad">iPad</option>
+          <option value="s5">Galaxy S5</option>
+        </select>
+      </div>-->
+      <ueditor #full [config]="custom" (onPreReady)="onPreReady($event)"></ueditor>
+  </div>
+</form>

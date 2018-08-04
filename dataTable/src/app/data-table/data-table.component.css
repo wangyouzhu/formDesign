@@ -1,0 +1,73 @@
+li {
+  list-style-type: none;
+}
+
+#toggleData .modal-body {
+  display: flex;
+  flex-flow: wrap;
+  padding-right: 5px;
+}
+
+#toggleData li {
+  width: auto;
+  margin-right: 10px;
+}
+
+.qa:nth-child(even) {
+  float: right;
+}
+
+.qa:not(:first-child):not(:nth-child(2)) {
+  margin-top: 10px;
+}
+
+.btn-group.tool{
+    margin:  0 0 10px 0;
+}      
+
+.btn-fun,
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open>.dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open>.dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open>.dropdown-toggle.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+  box-shadow: none;
+  background: none;
+  border: none;
+  color: rgb(97, 193, 248);
+  outline: none;
+}
+
+.btn-fun::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 13px;
+  background: #229ddd;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-img, .a-img {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+.dropdown-menu li a{
+  color: #757373;
+  line-height: 25px;
+}
+
+.dropdown-menu li a:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}

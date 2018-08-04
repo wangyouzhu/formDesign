@@ -1,0 +1,193 @@
+/* @import '~/assets/ueditor/formdesign/bootstrap/css/bootstrap-latest.css'; */
+
+.well{
+    padding: 0 10px 10px 10px;
+    padding-top: 0px;
+}
+.well .btn{
+    margin-top: 10px;
+}
+button img{
+    width: 15px;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+.btn-info {
+    background: #1296db;
+}
+.btn-info:hover {
+    background: #27acf1;
+    border-color: #27acf1;
+}
+
+
+/* 点击手机版编辑 */
+.phoneSelectContainer {
+    float: left;
+}
+
+#phoneSelect {
+    padding: 5px;
+}
+
+.ueditor-textarea.edui-default.phone {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.ueditor-textarea.edui-default.phone .edui-editor-bottomContainer {
+    display: none;
+}
+
+.ueditor-textarea.edui-default.phone.iphone6p {
+    height: 763px;
+    width: 414px;
+}
+.ueditor-textarea.edui-default.phone.iphone6 {
+    height: 667px;
+    width: 375px;
+}
+.ueditor-textarea.edui-default.phone.iphone5 {
+    height: 568px;
+    width: 320px;
+}
+.ueditor-textarea.edui-default.phone.iphone4 {
+    height: 480px;
+    width: 320px;
+}
+.ueditor-textarea.edui-default.phone.ipad {
+    height: 1024px;
+    width: 768px;
+}
+.ueditor-textarea.edui-default.phone.s5 {
+    height: 640px;
+    width: 360px;
+}
+
+
+/*样式改版v1*/
+div,dl,dt,dd{
+	padding: 0;
+	margin: 0;
+}
+.ue-top-swtool{
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 10px;
+	position: absolute;
+	right: 50px;
+    top: 5px;
+}
+.ue-top-tableid,.ue-top-sw,.ue-top-swmobile{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.ue-top-tableid{
+  height: auto;
+  line-height: 18px;
+  overflow: hidden;
+}
+.ue-top-tableid1{
+	height: 30px;
+	line-height: 18px;
+	overflow: hidden;
+}
+.ue-top-sw ul{
+	height: 100%;
+	box-sizing: border-box;
+}
+.ue-top-sw li{
+	width: 50%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	list-style: none;
+	font-size: 20px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.ue-top-sw li.act{
+	border-bottom: 2px solid #199ED8;
+}
+.ue-top-swmobile{
+	text-align: right;
+}
+.swbtn-pc-mobile{
+	display: inline-block;
+	width: 127px;
+	height: 29px;
+	color: #FFFFFE;
+	line-height: 29px;
+	text-align: right;
+	padding-right: 10px;
+	background: url(../../assets/icon/ueswmobile.png) no-repeat;
+	cursor: pointer;
+  bottom: 0;
+}
+.ue-my-control{
+	margin-bottom: 10px;
+}
+.ue-my-ctlblock-title{
+	width: 80px;
+	text-align: center;
+	border-right:2px solid #199ED8;
+}
+.ue-my-ctlblock-btn{
+	float: left;
+	height: auto;
+	overflow: hidden;
+	padding-left: 3px;
+	box-sizing: border-box;
+}
+.ue-my-noctlblock-msg{
+	height: 30px;
+	line-height: 30px;
+}
+/*.ue-my-control,.ue-my-ctlblock,.ue-my-ctlblock dl{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.ue-my-ctlblock dl dt{
+	float: left;
+	width: 20%;
+	line-height: 26px;
+	text-align: center;
+	border-right:2px solid #199ED8;
+}
+.ue-my-ctlblock dl dd.ue-my-ctlblock-btn{
+	float: left;
+	height: auto;
+	overflow: hidden;
+	width: 80%;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.dd.ue-my-ctlblock-btn{
+	height: 100%;
+}*/
+.mybtn{
+	display: inline-block;
+	padding: 0px 12px;
+	text-align: center;
+	border: 1px solid #797979;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.ue-my-ctlblock-btn .mybtn{
+	margin: 2px 5px;
+}
+.ue-my-ctlblock-btn .noBtn{
+	background: #ddd;
+
+}
+/*END 样式改版v1*/
+
+@media screen and (max-width: 859px) {
+    .phoneSelectContainer {
+        float: initial;
+    }
+}
